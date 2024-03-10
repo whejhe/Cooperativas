@@ -1,0 +1,51 @@
+ion-card{
+    gap: 100px;
+    padding: 20px 0;
+    border-radius: 15px;
+    background-color: rgb(61, 61, 61);
+}
+
+ion-content{
+    padding-bottom: 70px;
+}
+
+.image-header{
+    margin: 1em;
+    width: 100%;
+}
+
+.añadir{
+    background-color: rgb(61, 61, 61);
+    border-radius: 50%;
+    padding: 0.7em;
+}
+
+.flecha{
+    font-size: 2em;
+    margin: 0 0.3em;
+    padding: 0;
+    color: rgb(61, 61, 61);
+}
+
+.image-publicacion{
+  margin: auto 10px;
+  width: 50%;
+  float: left;
+
+}
+.title-publicacion{
+  color: rgb(34, 33, 33);
+  font-size: 1.5em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.publicacion-item{
+  background-color: rgb(236, 233, 233);
+  margin: 1em;
+  border-radius: 5px;
+  padding: 0.5em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: black;
+}
+
