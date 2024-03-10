@@ -1,0 +1,42 @@
+npm install yarn
+npm install @angular/core
+npm install firebase
+npm install @angular/fire
+npm install @asymmetrik/ngx-leaflet
+npm install @types/leaflet
+npm install @capacitor/android
+npm install @capacitor/camera
+
+
+
+npx cap add android
+
+
+ionic g c components/custom-input
+ionic g c components/header
+ionic g c components/nuevaPublicacion
+components.module.ts
+
+ionic g page pages/auth
+ionic g page pages/auth/login
+ionic g page pages/auth/register
+ionic g page pages/auth/forgont-password
+auth.module.ts
+
+ionic g page pages/main
+ionic g page pages/main/about
+ionic g page pages/main/calendar
+ionic g page pages/main/cooperatives
+ionic g page pages/main/home
+ionic g page pages/main/lista-usuarios
+ionic g page pages/main/map
+ionic g page pages/main/perfil-grupo
+ionic g page pages/main/portada
+ionic g page pages/main/profiel
+ionic g page pages/main/publicar
+ionic g page pages/main/register-group
+
+ionic g p pipes/filtrado
+
+ionic g service services/firebase
+ionic g service services/utils
