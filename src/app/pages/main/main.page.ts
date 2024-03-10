@@ -18,7 +18,6 @@ export class MainPage implements OnInit {
     {title: "Cooperativas" , url: 'cooperatives', icon:'business-outline'},
     {title: "Lista de usuarios" , url: 'lista-usuarios', icon:'people-outline'},
     {title: "Publicar" , url: 'publicar', icon:'add-circle-outline'},
-    {title: "Mapa", url: 'map', icon:'map-outline'},
     {title: "Calendario" , url: 'calendar', icon:'calendar-outline'},
     {title: "Acerca de" , url: 'about', icon:'information-circle-outline'},
 
