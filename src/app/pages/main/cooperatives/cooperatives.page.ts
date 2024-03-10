@@ -51,8 +51,9 @@ export class CooperativesPage implements OnInit {
   }
 
   goToGroupProfile(groupId: string) {
-    this.router.navigate(['/group-profile', groupId]);
+    this.utilsSvc.routerLink(`/main/group-profile/${groupId}`);
     console.log(groupId)
+    console.log(this.utilsSvc.routerLink(`/main/group-profile/${groupId}`))
   }
 
   ngOnInit() {

@@ -21,11 +21,9 @@ export class PerfilGrupoPage implements OnInit {
 
 
   ngOnInit() {
-    // Obtener el valor del parámetro de ruta
     this.route.params.subscribe(params => {
     const groupId = params['groupId'];
     console.log('groupId from route:', groupId);
-    // Aquí puedes cargar la información del grupo con el groupId
   });
   }
 
