@@ -4,4 +4,5 @@ export interface Publicacion{
   comentario: string;
   date: string;
   userId: string;
+  favotito:boolean;
 }

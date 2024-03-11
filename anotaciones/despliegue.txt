@@ -1,1 +1,1 @@
-https://cooperativas-ionic-firebase.vercel.app/main/home
+https://cooperativas.vercel.app/main/home

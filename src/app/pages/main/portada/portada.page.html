@@ -23,7 +23,9 @@
         <img class="image-publicacion" alt="p.title" [src]="p.image" />
         <p>{{p.comentario}}</p>
         <ion-card-subtitle>{{p.date}}</ion-card-subtitle>
-      </ion-card-content>
+         <!-- CAMPO FAVORITA -->
+         <ion-checkbox [(ngModel)]="p.favorita" (ionChange)="marcarComoFavorita(p)"></ion-checkbox>
+        </ion-card-content>
     </ion-card>
   </ion-list>
 

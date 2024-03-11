@@ -38,11 +38,16 @@ export class PortadaPage implements OnInit {
 
 
   ionViewWillEnter() {
+    const publicacionesGuardadas = localStorage.getItem('publicaciones_favoritas');
+    const publicacionesFavoritas = publicacionesGuardadas ? JSON.parse(publicacionesGuardadas) : [];
+    // Actualizar el estado de favorita para cada publicación
+  this.publicacion.forEach(p => {
+    p.favotito = publicacionesFavoritas.some(pf => pf.id === p.userId);
+  });
     this.getPublicaciones();
   }
 
   getPublicaciones() {
-    // let path = `users/${this.user().uid}/publicaciones`;
     let path = `publicaciones`;
     this.loading = true;
 
@@ -60,6 +65,13 @@ export class PortadaPage implements OnInit {
       }
     })
   }
+
+  marcarComoFavorita(publicacion: any) {
+    publicacion.favorita = !publicacion.favorita;
+    this.utilsSvc.saveInLocalStorage('publicacion', publicacion);
+    console.log(`La publicación ${publicacion.title} ha sido marcada como favorita: ${publicacion.favorita}`);
+  }
+
 
   async addUpdatePublicaciones(publicacion?: Publicacion) {
     let sucess = await this.utilsSvc.presentModal({
@@ -89,7 +101,7 @@ export class PortadaPage implements OnInit {
     });
   }
 
-  //ELIMINAR PRODUCTO
+  //ELIMINAR PUBLICACION
   async deletePublicacion(publicacion: Publicacion) {
 
     let path = `users/${this.user().uid}/publicaciones/${publicacion.title}`;
@@ -126,5 +138,6 @@ export class PortadaPage implements OnInit {
       loading.dismiss();
     })
   }
+
 
 }
